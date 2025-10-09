@@ -64,7 +64,7 @@ export default function RegisterScreen() {
     };
 
     return (
-        <KeyboardAvoidingView 
+        <KeyboardAvoidingView
             style={styles.container}
             behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         >
@@ -77,7 +77,7 @@ export default function RegisterScreen() {
                     <Text style={styles.title}>Crie sua conta</Text>
                     <Text style={styles.subtitle}>Preencha os dados abaixo</Text>
 
-                    <TextInput 
+                    <TextInput
                         style={styles.input}
                         placeholder="Nome Completo"
                         value={name}
@@ -86,7 +86,7 @@ export default function RegisterScreen() {
                         editable={!loading}
                     />
 
-                    <TextInput 
+                    <TextInput
                         style={styles.input}
                         placeholder="Email"
                         value={email}
@@ -97,7 +97,7 @@ export default function RegisterScreen() {
                         editable={!loading}
                     />
 
-                    <TextInput 
+                    <TextInput
                         style={styles.input}
                         placeholder="Senha (mínimo 6 caracteres)"
                         value={password}
@@ -107,7 +107,7 @@ export default function RegisterScreen() {
                         editable={!loading}
                     />
 
-                    <TextInput 
+                    <TextInput
                         style={styles.input}
                         placeholder="Confirme a Senha"
                         value={confirmPassword}
@@ -144,3 +144,74 @@ export default function RegisterScreen() {
     );
 
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#f0f0f7',
+    },
+    scrollContent: {
+        flexGrow: 1,
+    },
+    content: {
+        flex: 1,
+        justifyContent: 'center',
+        padding: 20,
+        paddingTop: 60,
+        paddingBottom: 60,
+    },
+    emoji: {
+        fontSize: 50,
+        textAlign: 'center',
+        marginBottom: 20,
+    },
+    title: {
+        fontSize: 32,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        color: '#333',
+        marginBottom: 8
+    },
+    subtitle: {
+        fontSize: 16,
+        textAlign: 'center',
+        color: '#666',
+        marginBottom: 40,
+    },
+    input: {
+        backgroundColor: '#FFF',
+        padding: 15,
+        borderRadius: 8,
+        fontSize: 16,
+        marginBottom: 15,
+        borderWidth: 1,
+        borderColor: '#DDD',
+    },
+    button: {
+        backgroundColor: '#007aff',
+        padding: 15,
+        borderRadius: 8,
+        alignItems: 'center',
+        marginTop: 10,
+        minHeight: 50,
+        justifyContent: 'center',
+    },
+    buttonDisabled: {
+        opacity: 0.6,
+    },
+    buttonText: {
+        color: '#FFF',
+        fontSize: 18,
+        fontWeight: 'bold',
+    },
+    backButton: {
+        marginTop: 20,
+        alignItems: 'center',
+        padding: 10,
+    },
+    backText: {
+        color: '#007aff',
+        fontSize: 16,
+        fontWeight: 'bold',
+    }
+})
